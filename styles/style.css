@@ -1,1 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --primary-color: #19c8fa;
+  --secondary-color: green;
+  --accent-color: blue;
+  --grey-color: #a2a2a2;
+  --main-transition-duration: 300ms;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+
+header .container::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  bottom: 0;
+  background-color: var(--grey-color);
+  height: 1px;
+  width: calc(100% - 32px);
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav .toggle-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  header nav .toggle-menu {
+    display: flex;
+    color: white;
+    font-size: 22px;
+  }
+}
+
+header nav ul {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  header nav ul li a {
+    padding: 16px !important;
+  }
+}
+
+header nav ul li a {
+  display: block;
+  padding: 40px 10px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  transition: var(--main-transition-duration);
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+header nav .form {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  margin-left: 32px;
+  border-left: solid 1px white;
+}
+
+header nav .form i {
+  position: absolute;
+  color: white;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
