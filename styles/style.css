@@ -189,6 +189,16 @@ header nav .form i {
   max-width: 500px;
 }
 
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+  }
+
+  .landing .text .content {
+    max-width: 100%;
+  }
+}
+
 .landing .text .content h2 {
   font-size: 32px;
   font-weight: normal;
@@ -199,4 +209,46 @@ header nav .form i {
 .landing .text .content p {
   font-size: 14px;
   line-height: var(--main-line-height);
+}
+
+.landing .change-background {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d3d3d3;
+}
+
+@media (max-width: 767px) {
+  .landing .change-background {
+    display: none;
+  }
+}
+
+.landing i:first-of-type {
+  left: 32px;
+}
+
+.landing i:last-of-type {
+  right: 32px;
+}
+
+.landing .bullets {
+  display: flex;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing .bullets li {
+  width: 20px;
+  height: 20px;
+  border: solid 1px white;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.landing .bullets li.active {
+  background-color: var(--primary-color);
+  border: none;
 }
