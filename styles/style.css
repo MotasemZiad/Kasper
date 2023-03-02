@@ -212,7 +212,8 @@ header nav .form i {
   position: relative;
 }
 
-.landing .overlay {
+.landing::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -303,8 +304,8 @@ header nav .form i {
 }
 
 .services {
-  margin-top: var(--main-section-padding);
-  margin-bottom: var(--main-section-padding);
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
 }
 
 @media (min-width: 768px) {
@@ -343,4 +344,28 @@ header nav .form i {
 .services .services-container .service .text p {
   color: var(--dark-grey-color);
   line-height: var(--main-line-height);
+}
+
+.design {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  height: 600px;
+  background-image: url(../assets/images/design-features.jpg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.design::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 64%);
+}
+
+.design .image {
 }
