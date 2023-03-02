@@ -31,7 +31,7 @@
   left: 50%;
   bottom: -30px;
   transform: translateX(-50%);
-  width: 130px;
+  width: 120px;
   background-color: var(--light-black-color);
   height: 2px;
 }
