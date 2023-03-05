@@ -571,3 +571,73 @@ header nav .form i {
     margin-top: -50px;
   }
 }
+
+.stats {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  text-align: center;
+  background-image: url(../assets/images/stats.png);
+  background-size: cover;
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 72%);
+}
+
+.stats .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stats .box {
+  color: white;
+  padding: 56px;
+  background-color: var(--transparent-color);
+}
+
+@media (max-width: 767px) {
+  .stats .box {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .stats .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .stats .box {
+    flex-basis: 25%;
+  }
+}
+
+.stats .box i {
+  width: 42px;
+  height: 42px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 32px;
+}
+
+.stats .box .number {
+  font-size: 56px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.stats .box p {
+  font-size: 14px;
+}
