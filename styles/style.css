@@ -298,7 +298,8 @@ header nav .form i {
   margin-right: 6px;
 }
 
-.landing .bullets li.active {
+.landing .bullets li.active,
+.landing .bullets li:hover {
   background-color: var(--primary-color);
   border: none;
 }
@@ -407,4 +408,97 @@ header nav .form i {
 
 .design .text ul li i {
   margin-right: 15px;
+}
+
+.portfolio {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio .shuffle li {
+  padding: 10px;
+}
+
+.portfolio .shuffle li a {
+  text-decoration: none;
+  color: black;
+}
+
+.portfolio .shuffle li.active a,
+.portfolio .shuffle li:hover a {
+  color: white;
+}
+
+.portfolio .shuffle li.active,
+.portfolio .shuffle li:hover {
+  background-color: var(--primary-color);
+}
+
+.portfolio .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.portfolio .images-container .box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .images-container .box:hover .caption {
+  bottom: 0;
+}
+
+.portfolio .images-container .box:hover img {
+  transform: rotate(3deg) scale(1.2);
+}
+
+@media (min-width: 768px) {
+  .portfolio .images-container .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1199px) {
+  .portfolio .images-container .box {
+    flex-basis: 25%;
+  }
+}
+
+.portfolio .box img {
+  max-width: 100%;
+  transition: var(--main-transition-duration);
+}
+.portfolio .box .caption {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  transition: var(--main-transition-duration);
+}
+.portfolio .box .caption h4 {
+  margin-bottom: 12px;
+}
+
+.portfolio .box .caption p {
+  color: var(--primary-color);
+  font-size: 14px;
+}
+
+.portfolio .more {
+  display: block;
+  width: fit-content;
+  background-color: var(--primary-color);
+  color: white;
+  text-transform: uppercase;
+  padding: 16px 20px;
+  margin: 30px auto;
+  text-decoration: none;
 }
