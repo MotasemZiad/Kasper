@@ -673,6 +673,15 @@ header nav .form i {
   margin-bottom: 64px;
 }
 
+@media (max-width: 767px) {
+  .testimonials-and-skills .container > div > h3 {
+    margin: 0 0 24px;
+  }
+  .testimonials-and-skills .container > div > p {
+    margin-bottom: 42px;
+  }
+}
+
 .testimonials .content {
   display: flex;
   align-items: center;
@@ -738,19 +747,46 @@ header nav .form i {
 }
 
 .skills .progress-holder {
+  margin-bottom: 38px;
 }
 
 .skills .progress-holder h4 {
+  margin-bottom: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .skills .progress-holder .progress {
+  background-color: #dedede;
+  height: 32px;
 }
 
 .skills .progress-holder .progress span {
+  display: block;
+  background-color: var(--primary-color);
+  height: 100%;
+  position: relative;
 }
 
 .skills .progress-holder .progress span::before {
+  content: attr(data-progress);
+  position: absolute;
+  top: -40px;
+  right: -18px;
+  width: 40px;
+  background-color: black;
+  color: white;
+  padding: 4px 0;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .skills .progress-holder .progress span::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: -8px;
+  border-style: solid;
+  border-width: 8px;
+  border-color: black transparent transparent transparent;
 }
