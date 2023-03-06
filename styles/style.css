@@ -641,3 +641,113 @@ header nav .form i {
 .stats .box p {
   font-size: 14px;
 }
+
+.testimonials-and-skills {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.testimonials-and-skills .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .testimonials-and-skills .container > div {
+    flex-basis: 45%;
+  }
+}
+
+.testimonials-and-skills .container > div > h3 {
+  margin: 0 0 32px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.testimonials-and-skills .container > div > p {
+  color: var(--dark-grey-color);
+  line-height: var(--main-line-height);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.testimonials .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.testimonials .content img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 48px;
+}
+
+@media (max-width: 767px) {
+  .testimonials .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonials .content img {
+    margin: 0 auto 24px;
+  }
+}
+
+.testimonials .content .text {
+  line-height: var(--main-line-height);
+  border-bottom: solid 1px var(--grey-color);
+}
+
+.testimonials .content .text p {
+  color: var(--dark-grey-color);
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .testimonials .content .text p {
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+.testimonials .bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.testimonials .bullets li {
+  width: 14px;
+  height: 14px;
+  border: solid 1px var(--grey-color);
+  border-radius: 50%;
+  margin-right: 6px;
+  transition: var(--main-transition-duration);
+}
+
+.testimonials .bullets li.active,
+.testimonials .bullets li:hover {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.testimonials-and-skills .skills {
+}
+
+.skills .progress-holder {
+}
+
+.skills .progress-holder h4 {
+}
+
+.skills .progress-holder .progress {
+}
+
+.skills .progress-holder .progress span {
+}
