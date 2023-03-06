@@ -737,9 +737,6 @@ header nav .form i {
   border: none;
 }
 
-.testimonials-and-skills .skills {
-}
-
 .skills .progress-holder {
 }
 
@@ -750,4 +747,10 @@ header nav .form i {
 }
 
 .skills .progress-holder .progress span {
+}
+
+.skills .progress-holder .progress span::before {
+}
+
+.skills .progress-holder .progress span::after {
 }
