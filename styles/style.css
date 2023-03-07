@@ -833,3 +833,99 @@ q::after {
   font-family: "Font Awesome 6 free";
   font-weight: 900;
 }
+
+.pricing {
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.pricing .plans .plan {
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.pricing .plans .plan .head {
+  padding: 42px 24px;
+  border-top: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.pricing .plans .plan .head h3 {
+  font-weight: normal;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.pricing .plans .plan .head span {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.pricing .plans .plan .head span::before {
+  content: "$";
+  position: relative;
+  top: -40px;
+  left: -15px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  position: relative;
+  right: -15px;
+  font-size: 20px;
+}
+
+.pricing .plans .plan ul {
+  border-bottom: solid 1px var(--primary-color);
+}
+
+.pricing .plans .plan ul li {
+  position: relative;
+  padding: 20px;
+}
+
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 132px;
+  height: 1px;
+  background-color: var(--primary-color);
+}
+
+.pricing .plans .plan .foot a {
+  display: block;
+  margin: 32px auto;
+  padding: 20px;
+  width: fit-content;
+  border: 1px solid var(--primary-color);
+  text-decoration: none;
+}
+
+.pricing .contact-text {
+  margin: 50px auto 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  padding: 15px 30px;
+  margin: 20px auto;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+}
