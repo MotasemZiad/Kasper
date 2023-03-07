@@ -845,6 +845,12 @@ q::after {
   gap: 24px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pricing .plans {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .pricing .plans .plan {
   background-color: #fafafa;
   text-align: center;
