@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 :root {
   --primary-color: #19c8fa;
-  --secondary-color: green;
-  --accent-color: blue;
   --transparent-color: rgb(15 116 143 / 70%);
   --grey-color: #a2a2a2;
   --dark-grey-color: #787878;
   --light-black-color: #333333;
+  --alternative-background-color: #1f2021;
   --main-transition-duration: 300ms;
   --main-line-height: 1.6;
   --main-section-padding: 100px;
@@ -206,7 +205,7 @@ header nav .form i {
 
 .landing {
   min-height: 100vh;
-  background-color: #1f2021;
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/landing.jpg);
   background-size: cover;
   position: relative;
@@ -258,7 +257,7 @@ header nav .form i {
 
 .landing .text .content p {
   font-size: 14px;
-  line-height: var(--main-line-height);
+  line-height: calc(var(--main-line-height) * 1.15);
 }
 
 .landing .change-background {
@@ -340,18 +339,19 @@ header nav .form i {
 
 .services .services-container .service .text h3 {
   color: var(--primary-color);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .services .services-container .service .text p {
   color: var(--dark-grey-color);
-  line-height: var(--main-line-height);
+  line-height: calc(var(--main-line-height) * 1.15);
 }
 
 .design {
   padding-top: var(--main-section-padding);
   padding-bottom: var(--main-section-padding);
   height: 600px;
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/design-features.jpg);
   background-size: cover;
   position: relative;
@@ -576,6 +576,7 @@ header nav .form i {
   padding-top: var(--main-section-padding);
   padding-bottom: var(--main-section-padding);
   text-align: center;
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/stats.png);
   background-size: cover;
   position: relative;
@@ -615,7 +616,7 @@ header nav .form i {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1199px) {
   .stats .box {
     flex-basis: 25%;
   }
@@ -668,7 +669,7 @@ header nav .form i {
 
 .testimonials-and-skills .container > div > p {
   color: var(--dark-grey-color);
-  line-height: var(--main-line-height);
+  line-height: calc(var(--main-line-height) * 1.15);
   text-align: center;
   margin-bottom: 64px;
 }
@@ -706,7 +707,7 @@ header nav .form i {
 }
 
 .testimonials .content .text {
-  line-height: var(--main-line-height);
+  line-height: calc(var(--main-line-height) * 1.15);
   border-bottom: solid 1px var(--grey-color);
 }
 
@@ -788,12 +789,13 @@ header nav .form i {
   right: -8px;
   border-style: solid;
   border-width: 8px;
-  border-color: black transparent transparent transparent;
+  border-color: black transparent transparent;
 }
 
 .quote {
   padding-top: var(--main-section-padding);
   padding-bottom: var(--main-section-padding);
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/quote.jpg);
   background-size: cover;
   color: white;
@@ -940,6 +942,7 @@ q::after {
 .subscription {
   padding-top: var(--main-section-padding);
   padding-bottom: var(--main-section-padding);
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/subscribe.jpg);
   background-size: cover;
   position: relative;
@@ -1118,6 +1121,7 @@ q::after {
 footer {
   padding-top: calc(var(--main-section-padding) / 2);
   padding-bottom: calc(var(--main-section-padding) / 2);
+  background-color: var(--alternative-background-color);
   background-image: url(../assets/images/subscribe.jpg);
   background-size: cover;
   position: relative;
