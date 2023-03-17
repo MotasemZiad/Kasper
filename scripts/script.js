@@ -3,3 +3,5 @@ function myFun(){
         console.log("Hello World! ${i + 1}");
     }
 }
+
+myFun();
