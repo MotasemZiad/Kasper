@@ -1008,6 +1008,7 @@ q::after {
   border: 1px solid white;
   border-left: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .subscription form input[type="email"]:focus,
